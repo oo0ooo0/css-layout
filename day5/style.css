@@ -1,0 +1,117 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css');
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+  width: 100%;
+  height: 100vh;
+  background: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: #fff;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(6, 13.5vw);
+  grid-template-rows: 5.5vw repeat(2, 17.8vw);
+  grid-template-areas:
+    'header header header header header header'
+    'beige img1 red img2 grey light-green'
+    'brown blue img3 green img4 pink';
+}
+
+.container > div {
+  padding: 1vw;
+  font: normal 400 1vw/1.5 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue';
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.container > div.header {
+  justify-content: center;
+  grid-area: header;
+  text-align: center;
+  font-size: 3vw;
+  line-height: 5.5vw;
+  background: #fff;
+}
+
+.img1 {
+  width: 100%;
+  height: 0;
+  padding-top: calc (300 / 1000 * 100%);
+  background: url('11.png') center center;
+}
+.img2 {
+  width: 100%;
+  height: 0;
+  padding-top: calc (300 / 1000 * 100%);
+  background: url('12.png') center center;
+}
+.img3 {
+  width: 100%;
+  height: 0;
+  padding-top: calc (300 / 1000 * 100%);
+  background: url('13.png') center center;
+}
+.img4 {
+  width: 100%;
+  height: 0;
+  padding-top: calc (300 / 1000 * 100%);
+  background: url('14.png') center center;
+}
+.beige {
+  justify-content: space-between;
+  grid-area: beige;
+  background: #b7b59d;
+  height: 100%;
+}
+.red {
+  justify-content: center;
+  grid-area: red;
+  background: #fe3e15;
+}
+.grey {
+  justify-content: center;
+  grid-area: grey;
+  background: #847f95;
+}
+.light-green {
+  justify-content: center;
+  grid-area: light-green;
+  background: #d0ff71;
+}
+.brown {
+  justify-content: space-between;
+  grid-area: brown;
+  background: #983433;
+}
+.blue {
+  justify-content: space-between;
+  grid-area: blue;
+  background: #49a9fa;
+}
+.green {
+  justify-content: center;
+
+  grid-area: green;
+  background: #41907a;
+}
+.pink {
+  justify-content: flex-end;
+  grid-area: pink;
+  background: #e3c4e5;
+}
+
+.sec {
+  border: 1px solid red;
+  display: flex;
+}
+.container > div {
+}

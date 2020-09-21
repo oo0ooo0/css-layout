@@ -1,0 +1,177 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 18fr 0.5fr 11fr;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.left,
+.center,
+.right {
+  background: #fff;
+}
+
+.left {
+  background: #ff6800;
+  padding: 0px 20px 5px 5px;
+}
+.left ul {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(56vw, 1fr));
+  grid-template-rows: 10px repeat(6, 1fr);
+  padding: 0;
+}
+.left li {
+  color: #ff0000;
+  display: grid;
+  grid-template-columns: 1fr 13fr 5fr;
+  grid-template-rows: 1fr;
+  margin-top: -1px;
+}
+
+.left li:hover div {
+  color: #fff;
+  border: 1px solid #fff;
+  z-index: 1;
+}
+.left li:hover > div:nth-child(3) div:first-child {
+  border-bottom: 1px solid #fff;
+}
+.left li:hover div:nth-child(3) div:last-child p {
+  background: #fff;
+}
+
+.left li > div {
+  border: 1px solid #ff0000;
+  margin-left: -1px;
+}
+
+.left li > div:nth-child(1) {
+  text-align: center;
+  font-size: 1.2vw;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-right: 0px; */
+}
+
+.left li > div:nth-child(2) {
+  text-align: left;
+  font-size: 5vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 10px;
+}
+.left li > div:nth-child(3) {
+  text-align: center;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+.left li > div:nth-child(3) div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0px solid #000;
+}
+
+.left li > div:nth-child(3) div:first-child {
+  border-bottom: 1px solid #ff0000;
+}
+
+.left li > div:nth-child(3) div p {
+  font-size: 1.2vw;
+}
+.left li > div:nth-child(3) div:last-child p {
+  background: #ff0000;
+  border-radius: 50px;
+  padding: 5px 10px;
+  color: #ff6800;
+  width: 13vw;
+}
+
+.center {
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 4vw;
+  position: relative;
+  font-size: 2vw;
+}
+.center > div:nth-child(1) {
+  background: #ff00ff;
+  writing-mode: vertical-rl;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 20px;
+}
+.center > div:nth-child(2) {
+  font-size: 4vw;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.center > div:nth-child(3) {
+  background: #160bff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  padding-top: 20px;
+}
+.right {
+  background: #ff0000;
+  padding: 0 10px 10px 10px;
+}
+.right .upWrap ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-size: 2vw;
+}
+
+.right .downWrap ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  /* grid-template-rows: repeat(2, 1fr); */
+  height: 100%;
+  border-top: 0;
+  gap: 20px;
+}
+.right .downWrap ul li {
+  margin-bottom: 30px;
+  font-size: 2vw;
+}
+.right .downWrap ul li p:first-child {
+  border-top: 2px solid #000;
+  font-size: larger;
+  padding-top: 20px;
+}
+.right .downWrap ul li p {
+  padding-top: 10px;
+  white-space: normal;
+  overflow-wrap: break-word;
+}

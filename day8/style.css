@@ -1,0 +1,187 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css');
+
+:root {
+  --default-shape-color: #7e7e7e;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-orange: #fd6b3a;
+  --color-green: #46ab4f;
+  --color-yellow: #efe758;
+}
+
+body {
+  padding: 15px;
+  width: 100%;
+  height: 100vh;
+  max-width: 921px;
+  max-height: 586px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background: var(--color-yellow);
+  position: relative;
+}
+.container {
+  max-width: 921px;
+  min-width: 921px;
+  max-height: 586px;
+  min-height: 586px;
+  position: relative;
+}
+
+body main {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+  box-sizing: border-box;
+}
+
+main.grid-main {
+  width: 100%;
+  height: 100%;
+  box-sizing: inherit;
+  background: var(--color-yellow);
+  display: grid;
+  grid-template-columns: 40px repeat(2, 1fr) 40px;
+  grid-template-rows: 4vh 41vh 5vh 35vh 6vh 4vh;
+}
+
+main.grid-main > * {
+  background-color: var(--default-shape-color);
+  color: var(--color-black);
+  font-size: 3vw;
+  border: 3px solid var(--color-orange);
+
+  position: relative;
+  box-sizing: border-box;
+
+  padding: 10px;
+}
+
+main.grid-main div:nth-child(1) {
+  color: var(--color-orange);
+  background: var(--color-white);
+  padding: 0 1vw;
+  font-size: 10px;
+  line-height: 2vw;
+  grid-column: span 4;
+  grid-row: span 1;
+}
+
+main.grid-main div:nth-child(2) {
+  background: var(--color-orange);
+  padding: 12px;
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+main.grid-main div:nth-child(2) p {
+  color: var(--color-white);
+  font: italic 600 12px/1.2 BlinkMacSystemFont;
+  word-wrap: break-word;
+  text-align: center;
+}
+main.grid-main div:nth-child(3) {
+  grid-column: span 1;
+  grid-row: span 4;
+  border: 0px solid #000;
+  position: relative;
+  background-color: #4158d0;
+  background-image: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
+}
+
+main.grid-main div:nth-child(4) {
+  background-color: #d9afd9;
+  background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
+  grid-column: span 1;
+  grid-row: span 4;
+  border: 0px solid #000;
+}
+main.grid-main div:nth-child(5) {
+  text-align: center;
+  background: var(--color-green);
+  color: var(--color-white);
+  padding: 30px 11px;
+  font-size: 10px;
+  grid-column: span 1;
+  grid-row: span 1;
+  border-top: 0px solid #000;
+  border-bottom: 0px solid #000;
+}
+main.grid-main div:nth-child(5) p,
+main.grid-main div:nth-child(6) p {
+  padding: 15px 0px;
+  font: italic 600 12px/1.2 BlinkMacSystemFont;
+  word-wrap: break-word;
+  text-align: center;
+}
+main.grid-main div:nth-child(6) {
+  text-align: center;
+  background: var(--color-green);
+  color: var(--color-white);
+  padding: 20px 12px;
+  font-size: 10px;
+  grid-column: span 1;
+  grid-row: span 3;
+  border-bottom: 0px solid #000;
+}
+main.grid-main div:nth-child(7) {
+  padding: 0;
+  padding-top: 5px;
+  background: #fff;
+  font-size: 35px;
+  text-align: center;
+  grid-column: span 1;
+  grid-row: span 1;
+  border-bottom: 0px solid #000;
+}
+main.grid-main div:nth-child(7) p {
+  padding-bottom: 5px;
+  color: var(--color-orange);
+  font: italic 600 12px/34px BlinkMacSystemFont;
+  word-wrap: break-word;
+  text-align: center;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+}
+
+main.grid-main div:nth-child(8) {
+  padding: 12px;
+  background: var(--color-white);
+  grid-column: span 1;
+  grid-row: span 1;
+  border-bottom: 0px solid #000;
+}
+main.grid-main div:nth-child(8) p {
+  color: var(--color-orange);
+  font: normal 600 12px/1 BlinkMacSystemFont;
+  writing-mode: vertical-lr;
+}
+main.grid-main div:nth-child(9) {
+  color: var(--color-orange);
+  background: var(--color-white);
+  padding: 0 1vw;
+  font-size: 10px;
+  line-height: 2vw;
+  grid-column: span 4;
+  grid-row: span 1;
+}
+
+.absolute {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  /* position: relative; */
+}
+.absolute div {
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  font: normal 600 60px/1.2 BlinkMacSystemFont;
+  transform: translateX(180%) translateY(180%);
+}
